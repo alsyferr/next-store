@@ -9,12 +9,12 @@ const Slider = () => {
 
     const [current, setCurrent] = useState(0)
     
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1))
-    //     }, 3000);
-    // return () => clearInterval(interval)
-    // }, []);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1))
+        }, 5000);
+    return () => clearInterval(interval)
+    }, []);
 
     const slides = [
         {
